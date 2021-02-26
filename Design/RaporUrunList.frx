@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="01/30/2019 21:18:56" ReportInfo.Modified="02/11/2019 16:39:24" ReportInfo.CreatorVersion="1.9.1.0">
+  <Dictionary>
+    <TableDataSource Name="Urunler" ReferenceName="Data.Urunler" DataType="System.Int32" Enabled="true">
+      <Column Name="PrID" DataType="System.Int32"/>
+      <Column Name="UrunAd" DataType="System.String"/>
+      <Column Name="UrunGrubu" DataType="System.Int16"/>
+      <Column Name="OncelikliFirma" DataType="System.Int32"/>
+      <Column Name="Barkod" DataType="System.String"/>
+      <Column Name="Barkod2" DataType="System.String"/>
+      <Column Name="seriNo" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="irsID" DataType="System.Int32"/>
+      <Column Name="siraNo" DataType="System.Int32"/>
+      <Column Name="adet" DataType="System.Int32"/>
+      <Column Name="pcID" DataType="System.Int32"/>
+      <Column Name="irsID1" DataType="System.Int32"/>
+      <Column Name="irsOlusturmaTarih" DataType="System.DateTime"/>
+      <Column Name="irsSevkTarih" DataType="System.DateTime"/>
+      <Column Name="irsFirma" DataType="System.Int32"/>
+      <Column Name="irsEvrakNo" DataType="System.String"/>
+      <Column Name="irsDurum" DataType="System.Byte"/>
+      <Column Name="irsKayıtTarihi" DataType="System.DateTime"/>
+      <Column Name="irstip" DataType="System.Int32"/>
+      <Column Name="aciklama" DataType="System.String"/>
+      <Column Name="seriNo1" DataType="System.Boolean" BindableControl="CheckBox"/>
+    </TableDataSource>
+  </Dictionary>
+  <ReportPage Name="Page1">
+    <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="94.5">
+      <RichObject Name="Rich1" Left="207.9" Top="28.35" Width="226.8" Height="37.8" Text="{\rtf1\ansi\ansicpg1254\deff0\nouicompat\deflang1055{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fnil\fcharset162 Arial;}{\f2\fnil\fcharset162 Tahoma;}}&#13;&#10;{\*\generator Riched20 10.0.17134}\viewkind4\uc1 &#13;&#10;\pard\b\fs32\lang1033\'dc\f1\lang1055 r\f0\lang1033\'fc\f1\lang1055 n Listesi Raporu\b0\f2\fs17\par&#13;&#10;}&#13;&#10;"/>
+      <TextObject Name="Text5" Left="548.1" Top="9.45" Width="160.65" Height="18.9" Text="[Date]" Format="Date" Format.Format="d"/>
+    </ReportTitleBand>
+    <PageHeaderBand Name="PageHeader1" Top="98.5" Width="718.2" Height="56.7">
+      <TextObject Name="Text2" Left="28.35" Width="94.5" Height="18.9" Text="UrunAd"/>
+      <TextObject Name="Text8" Left="264.6" Width="94.5" Height="18.9" Text="olusma tarih"/>
+      <TextObject Name="Text9" Left="378" Width="94.5" Height="18.9" Text="sevk tarih"/>
+      <TextObject Name="Text10" Left="510.3" Width="94.5" Height="18.9" Text="kayıt tarih"/>
+    </PageHeaderBand>
+    <DataBand Name="Data1" Top="159.2" Width="718.2" Height="18.9" DataSource="Urunler">
+      <TextObject Name="Text1" Left="28.35" Width="217.35" Height="18.9" Text="[Urunler.UrunAd]"/>
+      <TextObject Name="Text3" Left="264.6" Width="94.5" Height="18.9" Text="[Urunler.irsOlusturmaTarih]" Format="Date" Format.Format="d"/>
+      <TextObject Name="Text4" Left="378" Width="94.5" Height="18.9" Text="[Urunler.irsSevkTarih]" Format="Date" Format.Format="d"/>
+      <TextObject Name="Text7" Left="510.3" Width="94.5" Height="18.9" Text="[Urunler.irsKayıtTarihi]" Format="Date" Format.Format="d"/>
+    </DataBand>
+    <PageFooterBand Name="PageFooter1" Top="182.1" Width="718.2" Height="103.95">
+      <TextObject Name="Text6" Left="642.6" Top="75.6" Width="94.5" Height="18.9" Text="[Page]"/>
+    </PageFooterBand>
+  </ReportPage>
+</Report>

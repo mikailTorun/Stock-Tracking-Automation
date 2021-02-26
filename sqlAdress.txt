@@ -1,0 +1,1 @@
+Data Source=DESKTOP-SI7CUIV;Initial Catalog=StokVeMuhasebe;Integrated Security=True

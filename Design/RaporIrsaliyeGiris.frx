@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="05/06/2019 11:05:13" ReportInfo.Modified="06/04/2019 01:33:14" ReportInfo.CreatorVersion="1.9.1.0">
+  <Dictionary>
+    <TableDataSource Name="irsaliyebaslik" ReferenceName="Data.irsaliyebaslik" DataType="System.Int32" Enabled="true">
+      <Column Name="irsID" DataType="System.Int32"/>
+      <Column Name="irsOlusturmaTarih" DataType="System.DateTime"/>
+      <Column Name="irsSevkTarih" DataType="System.DateTime"/>
+      <Column Name="irsFirma" DataType="System.Int32"/>
+      <Column Name="irsEvrakNo" DataType="System.String"/>
+      <Column Name="irsDurum" DataType="System.Byte"/>
+      <Column Name="irsKayıtTarihi" DataType="System.DateTime"/>
+      <Column Name="irstip" DataType="System.Int32"/>
+      <Column Name="FirmaAdi" DataType="System.String"/>
+      <Column Name="IsyeriAdresi" DataType="System.String"/>
+      <Column Name="Telefon" DataType="System.String"/>
+      <Column Name="aciklama" DataType="System.String"/>
+    </TableDataSource>
+    <TableDataSource Name="irsalihareket" ReferenceName="Data.irsalihareket" DataType="System.Int32" Enabled="true">
+      <Column Name="irsID" DataType="System.Int32"/>
+      <Column Name="siraNo" DataType="System.Int32"/>
+      <Column Name="adet" DataType="System.Int32"/>
+      <Column Name="pcID" DataType="System.Int32"/>
+      <Column Name="seriNo" DataType="System.String"/>
+      <Column Name="urunAd" DataType="System.String"/>
+    </TableDataSource>
+  </Dictionary>
+  <ReportPage Name="Page1">
+    <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="18.9"/>
+    <PageHeaderBand Name="PageHeader1" Top="22.9" Width="718.2" Height="292.95">
+      <TextObject Name="Text13" Left="472.5" Top="274.05" Width="103.95" Height="18.9" Border.Lines="All" Text="seri no" HorzAlign="Center" VertAlign="Center"/>
+      <TextObject Name="Text11" Left="56.7" Top="274.05" Width="113.4" Height="18.9" Border.Lines="All" Text="SIRA NO" HorzAlign="Center" VertAlign="Center"/>
+      <TextObject Name="Text12" Left="321.3" Top="274.05" Width="151.2" Height="18.9" Border.Lines="All" Text="adet" HorzAlign="Center" VertAlign="Center"/>
+      <TextObject Name="Text16" Left="170.1" Top="274.05" Width="151.2" Height="18.9" Border.Lines="All" Text="MALIN CİNSİ" HorzAlign="Center" VertAlign="Center"/>
+      <TextObject Name="Text2" Left="444.15" Top="28.35" Width="236.25" Height="28.35" Text="GİRİŞ İRSALİYESİ" HorzAlign="Center" Font="Arial, 14pt, style=Bold"/>
+      <RichObject Name="Rich2" Left="37.8" Top="94.5" Width="330.75" Height="141.75" Border.Lines="All"/>
+      <TextObject Name="Text4" Left="37.8" Top="103.95" Width="75.6" Height="18.9" Text="SAYIN," HorzAlign="Center" Font="Arial, 9pt, style=Bold"/>
+      <TextObject Name="Text3" Left="113.4" Top="103.95" Width="245.7" Height="28.35" Text="[irsaliyebaslik.FirmaAdi]"/>
+      <TextObject Name="Text10" Left="37.8" Top="151.2" Width="321.3" Height="18.9" Text="[irsaliyebaslik.IsyeriAdresi]"/>
+      <TextObject Name="Text17" Left="37.8" Top="189" Width="170.1" Height="18.9" Text="[irsaliyebaslik.Telefon]"/>
+      <TextObject Name="Text5" Left="444.15" Top="94.5" Width="94.5" Height="18.9" Text="Sevk Tarihi:" HorzAlign="Center" Font="Arial, 9pt, style=Bold"/>
+      <TextObject Name="Text6" Left="444.15" Top="132.3" Width="94.5" Height="18.9" Text="Fatura No:" HorzAlign="Center" Font="Arial, 9pt, style=Bold"/>
+      <TextObject Name="Text7" Left="557.55" Top="94.5" Width="94.5" Height="18.9" Text="[irsaliyebaslik.irsSevkTarih]" Format="Date" Format.Format="d"/>
+      <TextObject Name="Text18" Left="557.55" Top="132.3" Width="94.5" Height="18.9" Text="[irsaliyebaslik.irsEvrakNo]"/>
+    </PageHeaderBand>
+    <DataBand Name="Data1" Top="319.85" Width="718.2" Height="28.35">
+      <TextObject Name="Text9" Left="321.3" Width="151.2" Height="18.9" Border.Lines="All" Text="[irsalihareket.adet]" HorzAlign="Center"/>
+      <TextObject Name="Text14" Left="472.5" Width="103.95" Height="18.9" Border.Lines="All" Text="[irsalihareket.seriNo]" HorzAlign="Center"/>
+      <TextObject Name="Text15" Left="170.1" Width="151.2" Height="18.9" Border.Lines="All" Text="[irsalihareket.urunAd]" HorzAlign="Center"/>
+      <TextObject Name="Text1" Left="56.7" Width="113.4" Height="18.9" Border.Lines="All" Text="[irsalihareket.siraNo]" HorzAlign="Center"/>
+    </DataBand>
+    <PageFooterBand Name="PageFooter1" Top="352.2" Width="718.2" Height="113.4">
+      <RichObject Name="Rich3" Left="321.3" Width="255.15" Height="85.05" Border.Lines="All" Text="{\rtf1\ansi\ansicpg1254\deff0\nouicompat\deflang1055{\fonttbl{\f0\fnil\fcharset162 Arial;}{\f1\fnil\fcharset238 Arial;}{\f2\fnil\fcharset162 Tahoma;}}&#13;&#10;{\*\generator Riched20 10.0.17134}\viewkind4\uc1 &#13;&#10;\pard\qc\f0\fs20 TESL\f1\u304?\f0 M ALAN\f2\fs17\par&#13;&#10;}&#13;&#10;"/>
+      <TextObject Name="Text8" Left="614.25" Top="85.05" Width="94.5" Height="18.9" Text="[Page]" HorzAlign="Center" VertAlign="Center" Font="Arial, 9pt"/>
+      <RichObject Name="Rich1" Left="56.7" Width="264.6" Height="85.05" Border.Lines="All" Text="{\rtf1\ansi\ansicpg1254\deff0\nouicompat\deflang1055{\fonttbl{\f0\fnil\fcharset162 Arial;}{\f1\fnil\fcharset238 Arial;}{\f2\fnil\fcharset162 Tahoma;}}&#13;&#10;{\*\generator Riched20 10.0.17134}\viewkind4\uc1 &#13;&#10;\pard\qc\f0\fs20 TESL\f1\u304?\f0 M EDEN\f2\fs17\par&#13;&#10;}&#13;&#10;"/>
+    </PageFooterBand>
+  </ReportPage>
+</Report>
